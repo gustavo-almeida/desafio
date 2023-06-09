@@ -93,7 +93,7 @@ No gráfico de Response Time Percentiles fica mais claro que o critério não fo
 
 O relatório completo pode ser visto no html gerado em **./pico_report/index.html**.
 
-## Considerações finais :pencil:
+## :pencil: Considerações finais
 
 Os critérios de aceitação precisam ser conversados para saber se condizem exatamente com o cenário esperado, pois ao limitar as execuções por segundo, mesmo aumentando a quantidade de threads, essas não surtem efeito a partir de um determinado número.
 
