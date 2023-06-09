@@ -75,7 +75,7 @@ Conforme observado, o tempo de resposta ficou em **1168.90ms** com um throughput
 
 \* O recurso do JMeter de manter um throughput não é preciso, pois trabalha na média, mas acredito que esse valor é aceitável dentro de um possível intervalo de confiança e também que aumentando o limite atenderíamos e até ultrapassaríamos as 250 requisições/segundo.
 
-O relatório completo pode ser visto no html gerado em **./carga_report/index.html**
+O relatório completo pode ser visto no html gerado em **./carga_report/index.html**.
 
 ### Teste de Pico - :heavy_multiplication_x:
 
@@ -90,3 +90,5 @@ No gráfico de Response Time Percentiles fica mais claro que o critério não fo
 ![pico](img/pico_90th.png)
 
 Obs.: O recurso que limita o throughput do JMeter teve dificuldades para manter uma média, pois a aplicação estava respondendo de forma muito aleatória, dado a característica do teste.
+
+O relatório completo pode ser visto no html gerado em **./pico_report/index.html**.
