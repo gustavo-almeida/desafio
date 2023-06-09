@@ -67,13 +67,13 @@ A única diferença entre os scripts está no rampup\*:
 
 ### Teste de Carga - :heavy_check_mark:
 
-O teste de carga foi considerado satisfatório, pois atendeu os critérios de aceitação durante todo o período de execução mantendo uma taxa baixa de erros (menos de 4%):
+O teste de carga foi considerado satisfatório, pois atendeu os critérios de aceitação durante todo o período de execução mantendo uma taxa baixa de erros (gráfico de pizza - menos de 4%):
 
 ![carga](img/carga.png)
 
 Conforme observado, o tempo de resposta ficou em **1168.90ms** com um throughput de **241.93**\* transações por segundo. O que atende os requisitos.
 
-\* O recurso do JMeter de manter um throughput não é preciso, pois trabalha na média, mas acredito que esse valor é aceitável dentro de um possível intervalo de confiança e também que aumentando o limite atenderíamos e até ultrapassaríamos as 250 requisições/segundo.
+\* O recurso do JMeter de manter um throughput não é preciso, pois trabalha na média. Dessa forma, foi considerado esse valor como aceitável dentro de um possível intervalo de confiança.
 
 O relatório completo pode ser visto no html gerado em **./carga_report/index.html**.
 
@@ -81,7 +81,7 @@ O relatório completo pode ser visto no html gerado em **./carga_report/index.ht
 
 Não ficou muito claro o que seria um teste de pico, então, foi entendido que seria um teste em que não há um rampup, ou seja, todas as requisições chegam de uma vez no início do teste. Logo foi dessa forma que foi configurado o script **pico.jmx**.
 
-Para esse cenário o teste não foi considerado satisfatório, pois a latência aumentou acima do critério de aceitação e consequentemente a taxa de erros aumentou bastante (mais de 17%).
+Para esse cenário o teste não foi considerado satisfatório, pois a latência aumentou acima do critério de aceitação e consequentemente a taxa de erros aumentou bastante (gráfico de pizza - mais de 17%).
 
 ![pico](img/pico.png)
 
@@ -92,3 +92,14 @@ No gráfico de Response Time Percentiles fica mais claro que o critério não fo
 Obs.: O recurso que limita o throughput do JMeter teve dificuldades para manter uma média, pois a aplicação estava respondendo de forma muito aleatória, dado a característica do teste.
 
 O relatório completo pode ser visto no html gerado em **./pico_report/index.html**.
+
+## Considerações finais :pencil:
+
+Os critérios de aceitação precisam ser conversados para saber se condiz exatamente com o cenário esperado, pois ao limitar as execuções por segundo, mesmo aumentando a quantidade de threads, não surte efeito a partir de um determinado número.
+
+Algumas melhorias para as próximas versões observadas:
+
+- Reativar o think time das requisições, mantendo o critério de aceitação.
+- Adicionar variáveis de forma aleatória para simular a seleção de cidades, voos e dados de pagamento, tornando o teste mais orgânico.
+- Adicionar um Docker file para execução mais precisa e segura, podendo rodar o teste em diferentes ambientes com facilidade e rapidez.
+- Ajustar o tempo total de teste de forma a condizer com as métricas de pico de uso da aplicação.
