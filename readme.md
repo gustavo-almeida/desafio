@@ -79,7 +79,7 @@ O relatório completo pode ser visto no html gerado em **./carga_report/index.ht
 
 ### Teste de Pico - :heavy_multiplication_x:
 
-Não ficou muito claro o que seria um teste de pico, então, foi entendido que seria um teste em que não há um rampup, ou seja, todas as requisições chegam de uma vez no início do teste. Logo foi dessa forma que foi configurado o script **pico.jmx**.
+Não ficou muito claro o que seria um teste de pico, então, foi entendido que seria um teste em que não há um rampup, ou seja, todas as requisições chegam de uma vez no início do teste. Logo, conforme anunciado anteriormente, assim foi configurado o script **pico.jmx**.
 
 Para esse cenário o teste não foi considerado satisfatório, pois a latência aumentou acima do critério de aceitação e consequentemente a taxa de erros aumentou bastante (gráfico de pizza - mais de 17%).
 
