@@ -34,8 +34,8 @@ Os cenários foram escritos na ferramenta JMeter e foram divididos em dois scrip
 1. Clonar o projeto ou baixar os scripts **carga.jmx** e **pico.jmx**
 1. Executar o comando _**jmeter -n -t \<local do script> -l \<local do result> -e -o \<diretorio relatorio>**_
 1. Por exemplo, no diretório onde estão os scripts rodar:
-   > _jmeter -n -t carga.jmx -l carga_result.jtl -e -o carga_report_\
-   > _jmeter -n -t pico.jmx -l pico_result.jtl -e -o pico_report_
+   > _jmeter -n -t carga.jmx -l carga_result.jtl -e -o carga-report_\
+   > _jmeter -n -t pico.jmx -l pico_result.jtl -e -o pico-report_
 1. Aguardar uns 7 minutos para a execução completa de cada script
 1. Na pasta escolhida para gerar o relatório terá um arquivo **index.html** com o resultado da execução.
 
