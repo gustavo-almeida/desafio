@@ -59,7 +59,7 @@ A única diferença entre os scripts está no rampup\*:
 - **carga.jmx**: 120 segundos de rampup
 - **pico.jmx**: 0 segundo de rampup
 
-\* Explico melhor esse ponto no relatório individual.
+> \* Explico melhor esse ponto no relatório individual.
 
 ---
 
@@ -73,7 +73,7 @@ O teste de carga foi considerado satisfatório, pois atendeu os critérios de ac
 
 Conforme observado, o tempo de resposta ficou em **1168.90ms** com um throughput de **241.93**\* transações por segundo. O que atende os requisitos.
 
-\* O recurso do JMeter de manter um throughput não é preciso, pois trabalha na média. Dessa forma, foi considerado esse valor como aceitável dentro de um possível intervalo de confiança.
+> \* O recurso do JMeter de manter um throughput não é preciso, pois trabalha na média. Dessa forma, foi considerado esse valor como aceitável dentro de um possível intervalo de confiança.
 
 O relatório completo pode ser visto no html gerado em **./carga_report/index.html**.
 
@@ -89,7 +89,7 @@ No gráfico de Response Time Percentiles fica mais claro que o critério não fo
 
 ![pico](img/pico_90th.png)
 
-Obs.: O recurso que limita o throughput do JMeter teve dificuldades para manter uma média, pois a aplicação estava respondendo de forma muito aleatória, dado a característica do teste.
+> O recurso que limita o throughput do JMeter teve dificuldades para manter uma média, pois a aplicação estava respondendo de forma muito aleatória, dado a característica do teste.
 
 O relatório completo pode ser visto no html gerado em **./pico_report/index.html**.
 
