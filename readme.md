@@ -59,7 +59,7 @@ A única diferença entre os scripts está no rampup\*:
 - **carga.jmx**: 120 segundos de rampup
 - **pico.jmx**: 0 segundo de rampup
 
-> \* Explico melhor esse ponto no relatório individual.
+> \* Esse ponto será explicado melhor no relatório individual.
 
 ---
 
@@ -79,7 +79,7 @@ O relatório completo pode ser visto no html gerado em **./carga_report/index.ht
 
 ### Teste de Pico - :heavy_multiplication_x:
 
-Não ficou muito claro o que seria um teste de pico, então, foi entendido que seria um teste em que não há um rampup, ou seja, todas as requisições chegam de uma vez no início do teste. Logo, conforme anunciado anteriormente, assim foi configurado o script **pico.jmx**.
+Não ficou muito claro o que seria um teste de pico, então, foi entendido que seria um teste em que **não há** um rampup, ou seja, todas as requisições chegam de uma vez no início do teste. Logo, conforme anunciado anteriormente, assim foi configurado o script **pico.jmx**.
 
 Para esse cenário o teste não foi considerado satisfatório, pois a latência aumentou acima do critério de aceitação e consequentemente a taxa de erros aumentou bastante (gráfico de pizza - mais de 17%).
 
@@ -95,7 +95,7 @@ O relatório completo pode ser visto no html gerado em **./pico_report/index.htm
 
 ## Considerações finais :pencil:
 
-Os critérios de aceitação precisam ser conversados para saber se condiz exatamente com o cenário esperado, pois ao limitar as execuções por segundo, mesmo aumentando a quantidade de threads, não surte efeito a partir de um determinado número.
+Os critérios de aceitação precisam ser conversados para saber se condizem exatamente com o cenário esperado, pois ao limitar as execuções por segundo, mesmo aumentando a quantidade de threads, essas não surtem efeito a partir de um determinado número.
 
 Algumas melhorias para as próximas versões observadas:
 
